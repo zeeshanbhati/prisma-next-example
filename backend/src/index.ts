@@ -101,8 +101,8 @@ app.post(`/user`, async (req, res) => {
   res.json(result)
 })
 
-const server = app.listen(3001, () =>
+app.listen(process.env.PORT, () =>
   console.log(
-    '🚀 Server ready at: http://localhost:3001',
+    `🚀 Server ready at: ${process.env.PORT}`,
   ),
 )
