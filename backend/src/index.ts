@@ -9,7 +9,7 @@ const app = express()
 
 app.use(express.json())
 app.use(cors())
-
+ 
 app.get('/drafts', async (req, res) => {
   const posts = await prisma.post.findMany({
     where: { published: false },
